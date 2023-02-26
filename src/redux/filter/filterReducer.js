@@ -1,4 +1,4 @@
-import { FILTER_PRIORITY, FILTER_STATUS } from "./actionTypes";
+import { ADD_COLOR, FILTER_PRIORITY, FILTER_STATUS, REMOVE_COLOR } from "./actionTypes";
 import filterIntialState from "./filterIntialState";
 
 export default function filterReducer(state = filterIntialState, action) {
@@ -11,13 +11,13 @@ export default function filterReducer(state = filterIntialState, action) {
 
     case FILTER_PRIORITY:
       switch (action.payload.changeType) {
-        case "addedColor":
+        case ADD_COLOR:
           return {
             ...state,
             colors: [...state.colors, action.payload.color],
           };
 
-        case "removeColor":
+        case REMOVE_COLOR:
           return {
             ...state,
             colors: state.colors.filter(

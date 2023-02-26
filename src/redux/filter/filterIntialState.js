@@ -1,6 +1,6 @@
 const filterIntialState = {
   status: "All",
-  color: [],
+  colors: [],
 };
 
 export default filterIntialState;
