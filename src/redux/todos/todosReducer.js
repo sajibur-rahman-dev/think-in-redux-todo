@@ -24,14 +24,13 @@ const nextTodoId = (todos) => {
 export default function todosReducer(state = todosIntialState, action) {
   switch (action.type) {
     case ADD_TODO:
-      const { todoText } = state.payload;
+      const { todoText } = action.payload;
       return [
         ...state,
         {
           id: nextTodoId(state),
           todoText: todoText,
           completed: false,
-          priority: "red",
         },
       ];
 
