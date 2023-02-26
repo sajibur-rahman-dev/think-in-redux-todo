@@ -15,25 +15,30 @@ function generateRandomNumber() {
   return randomNumber;
 }
 
+
+const nextTodoId = (todos) => {
+  const maxId = todos.reduce((maxId, todo) => Math.max(todo.id, maxId), -1);
+  return maxId + 1;
+};
+
 export default function todosReducer(state = todosIntialState, action) {
-  switch (action) {
+  switch (action.type) {
     case ADD_TODO:
       const { todoText } = state.payload;
       return [
         ...state,
         {
-          id: generateRandomNumber(),
-          todo: todoText,
+          id: nextTodoId(state),
+          todoText: todoText,
           completed: false,
           priority: "red",
         },
       ];
 
     case TOGGLE_TODO_STATUS:
-      const { todoId } = action.payload;
 
       return state.map((todo) => {
-        if (todo.id !== todoId) {
+        if (todo.id !== action.payload) {
           return todo;
         }
 

@@ -19,9 +19,7 @@ export const addTodo = (todoText) => {
 export const setToggleTodoStatus = (todoId) => {
   return {
     type: TOGGLE_TODO_STATUS,
-    payload: {
-      todoId,
-    },
+    payload: todoId,
   };
 };
 

@@ -14,7 +14,7 @@ export default function Header() {
         />
         <button
           type="submit"
-          className="appearance-none w-8 h-8 bg-[url('./images/plus.png')] bg-no-repeat bg-contain"
+          className="appearance-none w-8 h-8 bg-[url('../assets/images/plus.png')] bg-no-repeat bg-contain"
         ></button>
       </form>
 
