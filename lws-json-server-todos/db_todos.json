@@ -49,6 +49,16 @@
       "text": "hdjhdjhdjsdh",
       "completed": false,
       "id": 9
+    },
+    {
+      "text": "Learn AWS ",
+      "completed": false,
+      "id": 10
+    },
+    {
+      "text": "Learn App Development From LWS",
+      "completed": false,
+      "id": 11
     }
   ]
 }

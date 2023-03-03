@@ -4,6 +4,7 @@ import doubleTick from "../assets/images/double-tick.png";
 import addIcon from "../assets/images/plus.png";
 import { useDispatch } from "react-redux";
 import { addTodo, removeCompletedTodo, setCompletedAllTodo } from "../redux/todos/actionsCreators";
+import postTodo from "../redux/todos/thunks/postTodo";
 
 export default function Header() {
   const [input,setInput] = useState('');
@@ -14,7 +15,7 @@ export default function Header() {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(addTodo(input));
+    dispatch(postTodo(input));
     setInput('');
   }
 
