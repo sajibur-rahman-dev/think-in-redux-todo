@@ -38,7 +38,7 @@ export default function TodoItem({ todo }) {
         </svg>}
       </div>
 
-      <div className={`select-none flex-1 ${completed && "line-through"}`}>{todo.todoText}</div>
+      <div className={`select-none flex-1 ${completed && "line-through"}`}>{todo.text}</div>
 
       <div onClick={() => handleChangePriority(id,'green')} className={`flex-shrink-0 h-4 w-4 rounded-full border-2 ml-auto cursor-pointer border-green-500 hover:bg-green-500 ${priority === 'green' && "bg-green-500"}`}></div>
 

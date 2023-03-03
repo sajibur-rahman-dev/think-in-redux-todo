@@ -1,6 +1,7 @@
 import {
   ADD_TODO,
   DELETE_TODO,
+  LOAD_TODO,
   REMOVE_COMPLETED_TODO,
   SET_COMPLETE_ALL_TODO,
   SET_PRIORITY_COLOR,
@@ -24,15 +25,22 @@ const nextTodoId = (todos) => {
 export default function todosReducer(state = todosIntialState, action) {
   switch (action.type) {
     case ADD_TODO:
-      const { todoText } = action.payload;
+      const text  = action.payload;
       return [
         ...state,
         {
           id: nextTodoId(state),
-          todoText: todoText,
+          text: text,
           completed: false,
         },
       ];
+    
+      case LOAD_TODO:
+        const todos = action.payload;
+        return [
+          ...state,
+          ...todos
+        ];
 
     case TOGGLE_TODO_STATUS:
 

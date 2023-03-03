@@ -5,16 +5,23 @@ import {
   DELETE_TODO,
   REMOVE_COMPLETED_TODO,
   SET_COMPLETE_ALL_TODO,
+  LOAD_TODO,
 } from "./actionTypes";
 
-export const addTodo = (todoText) => {
+export const addTodo = (text) => {
   return {
     type: ADD_TODO,
-    payload: {
-      todoText,
-    },
+    payload: text,
   };
 };
+
+export const loadTodo = (todos) => {
+  return {
+    type: LOAD_TODO,
+    payload: todos,
+  };
+};
+
 
 export const setToggleTodoStatus = (todoId) => {
   return {
