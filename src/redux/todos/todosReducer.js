@@ -38,7 +38,6 @@ export default function todosReducer(state = todosIntialState, action) {
       case LOAD_TODO:
         const todos = action.payload;
         return [
-          ...state,
           ...todos
         ];
 

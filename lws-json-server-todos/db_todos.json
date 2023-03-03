@@ -1,64 +1,24 @@
 {
   "todos": [
     {
-      "id": 1,
-      "text": "Learn Vanilla JavaScript",
-      "completed": true,
-      "color": "yellow"
-    },
-    {
-      "id": 2,
-      "text": "Learn Modern ES6+ JavaScript",
-      "completed": true,
-      "color": "red"
-    },
-    {
-      "id": 3,
-      "text": "Learn React JS",
-      "completed": true,
-      "color": "yellow"
-    },
-    {
-      "text": "Learn Redux Basics",
-      "completed": true,
-      "id": 4,
-      "color": "red"
-    },
-    {
-      "text": "Learn Redux fundamentals",
-      "completed": true,
-      "id": 5,
-      "color": "red"
-    },
-    {
-      "text": "learn Redux",
+      "text": "Learn React from Redux",
       "completed": false,
-      "id": 6
+      "id": 1
     },
     {
-      "text": "Learn Redux Toolkit",
+      "text": "Learn Flutter From internet",
       "completed": false,
-      "id": 7
+      "id": 2
     },
     {
-      "text": "Test",
+      "text": "learn Docker for Internet",
       "completed": false,
-      "id": 8
+      "id": 3
     },
     {
-      "text": "hdjhdjhdjsdh",
+      "text": "Learn node.js from",
       "completed": false,
-      "id": 9
-    },
-    {
-      "text": "Learn AWS ",
-      "completed": false,
-      "id": 10
-    },
-    {
-      "text": "Learn App Development From LWS",
-      "completed": false,
-      "id": 11
+      "id": 4
     }
   ]
 }
