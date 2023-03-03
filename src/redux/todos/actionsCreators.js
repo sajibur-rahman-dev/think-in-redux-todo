@@ -8,10 +8,14 @@ import {
   LOAD_TODO,
 } from "./actionTypes";
 
-export const addTodo = (text) => {
+export const addTodo = (text,color,complete) => {
   return {
     type: ADD_TODO,
-    payload: text,
+    payload: {
+      text,
+      color,
+      complete,
+    },
   };
 };
 

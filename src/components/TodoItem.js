@@ -2,11 +2,12 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import cancel from "../assets/images/cancel.png";
 import { deleteTodo, setTodoPriorityColor, setToggleTodoStatus } from "../redux/todos/actionsCreators";
+import updateTodoPriority from "../redux/todos/thunks/updateTodoPriority";
 import updateTodoStatus from "../redux/todos/thunks/updateTodoStatus";
 
 export default function TodoItem({ todo }) {
   const dispatch = useDispatch();
-  const {id,text,completed,priority} = todo;
+  const {id,text,completed,color} = todo;
   console.log(`${JSON.stringify(todo)}`)
 
   const handleChangeStatus = (todoId,todoStatus) => {
@@ -16,7 +17,7 @@ export default function TodoItem({ todo }) {
 
   const handleChangePriority = (todoId,color) => {
     console.log(`todoId ${todoId}`)
-    dispatch(setTodoPriorityColor(todoId,color));
+    dispatch(updateTodoPriority(todoId,color));
   }
 
   const handleDeleteTodo = (todoId) => {
@@ -41,11 +42,11 @@ export default function TodoItem({ todo }) {
 
       <div className={`select-none flex-1 ${completed && "line-through"}`}>{text}</div>
 
-      <div onClick={() => handleChangePriority(id,'green')} className={`flex-shrink-0 h-4 w-4 rounded-full border-2 ml-auto cursor-pointer border-green-500 hover:bg-green-500 ${priority === 'green' && "bg-green-500"}`}></div>
+      <div onClick={() => handleChangePriority(id,'green')} className={`flex-shrink-0 h-4 w-4 rounded-full border-2 ml-auto cursor-pointer border-green-500 hover:bg-green-500 ${color === 'green' && "bg-green-500"}`}></div>
 
-      <div onClick={() => handleChangePriority(id,'yellow')} className={`flex-shrink-0 h-4 w-4 rounded-full border-2 ml-auto cursor-pointer border-yellow-500 hover:bg-yellow-500 ${priority === 'yellow' && "bg-yellow-500"}`}></div>
+      <div onClick={() => handleChangePriority(id,'yellow')} className={`flex-shrink-0 h-4 w-4 rounded-full border-2 ml-auto cursor-pointer border-yellow-500 hover:bg-yellow-500 ${color === 'yellow' && "bg-yellow-500"}`}></div>
 
-      <div onClick={() => handleChangePriority(id,'red')} className={`flex-shrink-0 h-4 w-4 rounded-full border-2 ml-auto cursor-pointer border-red-500 hover:bg-red-500 ${priority === 'red' && "bg-red-500"}`}></div>
+      <div onClick={() => handleChangePriority(id,'red')} className={`flex-shrink-0 h-4 w-4 rounded-full border-2 ml-auto cursor-pointer border-red-500 hover:bg-red-500 ${color === 'red' && "bg-red-500"}`}></div>
 
       <img
         onClick={() => handleDeleteTodo(id)}

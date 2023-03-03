@@ -1,23 +1,27 @@
 {
   "todos": [
     {
-      "text": "Learn React from Redux",
+      "text": "learn react js from internet",
       "completed": false,
+      "color": "green",
       "id": 1
     },
     {
-      "text": "Learn Flutter From internet",
-      "completed": false,
+      "text": "learn redux form internet",
+      "completed": true,
+      "color": "",
       "id": 2
     },
     {
-      "text": "learn Docker for Internet",
+      "text": "Learn from Python from Internet",
       "completed": false,
+      "color": "red",
       "id": 3
     },
     {
-      "text": "Learn node.js from",
+      "text": "Learn Redux from ChatGPT",
       "completed": false,
+      "color": "",
       "id": 4
     }
   ]

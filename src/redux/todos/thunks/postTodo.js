@@ -7,6 +7,7 @@ const postTodo = (text) => async (dispatch) => {
             body:JSON.stringify({
                 text:text,
                 completed:false,
+                color:"",
             }),
             headers:{
                 "Content-type":"application/json; charset=UTF-8",
@@ -15,7 +16,7 @@ const postTodo = (text) => async (dispatch) => {
 
         const todo = await response.json();
 
-        dispatch(addTodo(todo.text));
+        dispatch(addTodo(todo.text,todo.color,todo.complete));
     } catch (error) {
         console.log(`error is happend during fetch todo ${error}`);
     }
