@@ -9,10 +9,10 @@ import {
 } from "./actionTypes";
 import todosIntialState from "./todosIntialState";
 
-function generateRandomNumber() {
-  let randomNumber = Math.floor(Math.random() * 100000)
-  return randomNumber;
-}
+// function generateRandomNumber() {
+//   let randomNumber = Math.floor(Math.random() * 100000)
+//   return randomNumber;
+// }
 
 
 const nextTodoId = (todos) => {

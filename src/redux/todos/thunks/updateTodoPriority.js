@@ -1,4 +1,4 @@
-import { setTodoPriorityColor, setToggleTodoStatus } from "../actionsCreators";
+import { setTodoPriorityColor } from "../actionsCreators";
 
 const updateTodoPriority = (todoId,todoPriority) => async (dispatch) => {
     console.log(`todo id ==> ${todoId}`);
