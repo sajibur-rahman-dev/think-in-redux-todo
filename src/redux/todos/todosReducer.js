@@ -11,14 +11,17 @@ import todosIntialState from "./todosIntialState";
 
 function generateRandomNumber() {
   let randomNumber = Math.floor(Math.random() * 100000)
-    .toString()
-    .padStart(5, "0");
   return randomNumber;
 }
 
 
 const nextTodoId = (todos) => {
-  const maxId = todos.reduce((maxId, todo) => Math.max(todo.id, maxId), -1);
+  let maxId;
+  if(todos.length === 0){
+    maxId = 0;
+  } else {
+    maxId = todos.reduce((maxId, todo) => Math.max(todo.id, maxId), -1);
+  }
   return maxId + 1;
 };
 

@@ -2,13 +2,14 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import cancel from "../assets/images/cancel.png";
 import { deleteTodo, setTodoPriorityColor, setToggleTodoStatus } from "../redux/todos/actionsCreators";
+import deleteTodoFromServer from "../redux/todos/thunks/deleteTodoFromServer";
 import updateTodoPriority from "../redux/todos/thunks/updateTodoPriority";
 import updateTodoStatus from "../redux/todos/thunks/updateTodoStatus";
 
 export default function TodoItem({ todo }) {
   const dispatch = useDispatch();
   const {id,text,completed,color} = todo;
-  console.log(`${JSON.stringify(todo)}`)
+  console.log(`todos is    ${JSON.stringify(todo)}`)
 
   const handleChangeStatus = (todoId,todoStatus) => {
     console.log(`todo Id ${todoId}`);
@@ -22,7 +23,7 @@ export default function TodoItem({ todo }) {
 
   const handleDeleteTodo = (todoId) => {
     console.log(`todoId ${todoId}`)
-    dispatch(deleteTodo(todoId));
+    dispatch(deleteTodoFromServer(todoId));
   }
 
   console.log(` status ${completed}`)

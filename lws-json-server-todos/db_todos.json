@@ -1,28 +1,16 @@
 {
   "todos": [
     {
-      "text": "learn react js from internet",
+      "text": "Node",
       "completed": false,
-      "color": "green",
+      "color": "yellow",
       "id": 1
     },
     {
-      "text": "learn redux form internet",
-      "completed": true,
-      "color": "",
+      "text": "react",
+      "completed": false,
+      "color": "green",
       "id": 2
-    },
-    {
-      "text": "Learn from Python from Internet",
-      "completed": false,
-      "color": "red",
-      "id": 3
-    },
-    {
-      "text": "Learn Redux from ChatGPT",
-      "completed": false,
-      "color": "",
-      "id": 4
     }
   ]
 }

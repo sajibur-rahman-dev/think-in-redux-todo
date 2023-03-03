@@ -1,6 +1,7 @@
 import { setTodoPriorityColor, setToggleTodoStatus } from "../actionsCreators";
 
 const updateTodoPriority = (todoId,todoPriority) => async (dispatch) => {
+    console.log(`todo id ==> ${todoId}`);
     try {
         const response = await fetch(`http://localhost:9000/todos/${todoId}`,{
             method:'PATCH',
